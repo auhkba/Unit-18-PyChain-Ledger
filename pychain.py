@@ -72,7 +72,7 @@ class Block:
 
     # @TODO
     # Rename the `data` attribute to `record`, and set the data type to `Record`
-    record: str 
+    record: Record
 
     creator_id: int
     prev_hash: str = "0"
@@ -192,10 +192,9 @@ if st.button("Add Block"):
     # Update `new_block` so that `Block` consists of an attribute named `record`
     # which is set equal to a `Record` that contains the `sender`, `receiver`,
     # and `amount` values
-    new_record = Record(input_sender, input_receiver, input_amount)
-
+    
     new_block = Block(
-        record= new_record.sender + new_record.receiver + str(new_record.amount),
+        record= Record(input_sender, input_receiver, input_amount),
         creator_id=42,
         prev_hash=prev_block_hash
     )
