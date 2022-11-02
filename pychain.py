@@ -149,8 +149,8 @@ def setup():
     return PyChain([Block("Genesis", 0)])
 
 
-st.markdown("# PyChain")
-st.markdown("## Store a Transaction Record in the PyChain")
+st.markdown("# ChenCoin")
+st.markdown("## Store a Transaction Record in the ChenCoin")
 
 pychain = setup()
 
@@ -205,7 +205,7 @@ if st.button("Add Block"):
 ################################################################################
 # Streamlit Code (continues)
 
-st.markdown("## The PyChain Ledger")
+st.markdown("## The ChenCoin Ledger")
 
 pychain_df = pd.DataFrame(pychain.chain).astype(str)
 st.write(pychain_df)
